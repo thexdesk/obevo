@@ -28,7 +28,7 @@ CONTAINER_NAME=obevo-db2-instance
 
 
 ## Now start the setup
-docker pull ibmcom/db2express-c
+docker pull ibmcom/db2:11.5.0.0
 
 OLD_CONTAINER_ID=$(docker ps -aqf "name=$CONTAINER_NAME")
 if [ ! -z "$OLD_CONTAINER_ID" ]
@@ -39,7 +39,7 @@ then
 fi
 
 echo "Starting new container"
-docker run --name $CONTAINER_NAME -d -i -t -p $INSTANCE_PORT:$INSTANCE_PORT -e DB2INST1_PASSWORD=$INSTANCE_PASSWORD -e LICENSE=accept ibmcom/db2express-c:10.5.0.5-3.10.0 db2start
+docker run --name $CONTAINER_NAME -d -i -t -p $INSTANCE_PORT:$INSTANCE_PORT -e DB2INST1_PASSWORD=$INSTANCE_PASSWORD -e LICENSE=accept ibmcom/db2:11.5.0.0 db2start
 
 export CONTAINER_ID=$(docker ps -aqf "name=$CONTAINER_NAME")
 
