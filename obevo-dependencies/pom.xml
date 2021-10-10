@@ -35,7 +35,7 @@
     </description>
 
     <properties>
-        <schemacrawler.version>14.16.04-java7</schemacrawler.version>
+        <schemacrawler.version>14.21.02</schemacrawler.version>
         <schemacrawler-iq.version>14.16.03-java7</schemacrawler-iq.version>  <!-- IQ is maintained as a separate product; hence the separate version -->
     </properties>
 
