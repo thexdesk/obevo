@@ -29,7 +29,7 @@
 
     <properties>
         <maven.version>2.2.1</maven.version>
-        <maven.plugin.version>3.5</maven.plugin.version>
+        <maven.plugin.version>3.6.2</maven.plugin.version>
     </properties>
 
     <build>
@@ -40,7 +40,7 @@
                 <version>${maven.plugin.version}</version>
                 <configuration>
                     <!-- Need to limit this as DB2 driver conflicts with mojo scanning; only works w/ maven-plugin-plugin >= 3.5 -->
-                    <mojoDependencies />
+                    <mojoDependencies/>
                 </configuration>
                 <executions>
                     <execution>
@@ -80,7 +80,7 @@
                 <executions>
                     <execution>
                         <id>enforce-dependency-convergence</id>
-                        <phase />
+                        <phase/>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
@@ -117,7 +117,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -136,7 +136,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
